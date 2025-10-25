@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Tailwind</title>
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      /* Fade-in animation */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+
+      /* Neon glow hover */
+      .neon-glow:hover {
+        box-shadow: 0 0 15px rgba(34, 197, 94, 0.6),
+          0 0 30px rgba(34, 197, 94, 0.4);
+      }
+
+      .glow-text {
+        text-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-950 text-gray-100 min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 left-0 w-full bg-gray-900 p-4 flex justify-between items-center z-10 shadow-lg border-b border-gray-800"
+    >
+      <div class="text-green-400 font-bold text-xl glow-text">WebDev</div>
+      <div class="space-x-6">
+        <a
+          href="index.html"
+          class="text-gray-300 hover:text-green-400 transition"
+          >Home</a
+        >
+        <a
+          href="HTML.html"
+          class="text-gray-300 hover:text-green-400 transition"
+          >HTML</a
+        >
+        <a href="CSS.html" class="text-gray-300 hover:text-green-400 transition"
+          >CSS</a
+        >
+        <a href="Git.html" class="text-gray-300 hover:text-green-400 transition"
+          >Git</a
+        >
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20 px-6 max-w-5xl mx-auto fade-in">
+      <!-- Page Header -->
+      <section class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-green-400 glow-text mb-4">
+          Tailwind CSS
+        </h1>
+        <p class="text-gray-400 text-lg leading-relaxed max-w-3xl mx-auto">
+          <strong>Tailwind CSS</strong> is a utility-first CSS framework that
+          allows developers to quickly build responsive and modern web
+          interfaces directly in HTML. It emphasizes low-level utility classes
+          over pre-built components, giving you maximum flexibility.
+        </p>
+      </section>
+
+      <!-- Card Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <!-- Card 1: Overview -->
+        <div
+          class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-md neon-glow hover:scale-105 transition-transform duration-300 flex flex-col h-full"
+        >
+          <h2 class="text-xl font-semibold mb-3 text-green-400 glow-text">
+            Quick Overview
+          </h2>
+          <ul
+            class="text-gray-400 text-left list-disc list-inside space-y-2 flex-grow"
+          >
+            <li>
+              <strong>No Need to Write Style Code:</strong> Use pre-made utility
+              classes for rapid design.
+            </li>
+            <li>
+              <strong>Quick Changes:</strong> Adjust layouts and styles directly
+              in HTML.
+            </li>
+            <li>
+              <strong>Mobile-Friendly:</strong> Built-in responsive utilities
+              for all screen sizes.
+            </li>
+            <li>
+              <strong>Customizable:</strong> Tailor colors, sizes, and spacing
+              to fit your project.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Key Concepts -->
+        <div
+          class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-md neon-glow hover:scale-105 transition-transform duration-300 flex flex-col h-full"
+        >
+          <h2 class="text-xl font-semibold mb-3 text-green-400 glow-text">
+            Key Concepts
+          </h2>
+          <ul
+            class="text-gray-400 text-left list-disc list-inside space-y-2 flex-grow"
+          >
+            <li>
+              <strong>Utility-First:</strong> Build layouts using small,
+              composable classes.
+            </li>
+            <li>
+              <strong>Responsive Design:</strong> Create flexible layouts using
+              breakpoints like <code>sm:</code>, <code>md:</code>,
+              <code>lg:</code>.
+            </li>
+            <li>
+              <strong>Customization:</strong> Configure Tailwind settings via
+              <code>tailwind.config.js</code> for project-specific styles.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Essential Skills -->
+        <div
+          class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-md neon-glow hover:scale-105 transition-transform duration-300 flex flex-col h-full"
+        >
+          <h2 class="text-xl font-semibold mb-3 text-green-400 glow-text">
+            Essential Skills
+          </h2>
+          <ul
+            class="text-gray-400 text-left list-disc list-inside space-y-2 flex-grow"
+          >
+            <li>
+              <strong>Using Utility Classes:</strong> Control colors, spacing,
+              typography, borders, and shadows efficiently.
+            </li>
+            <li>
+              <strong>Responsive Design:</strong> Apply classes with
+              <code>md:</code> or <code>lg:</code> prefixes for different screen
+              sizes.
+            </li>
+            <li>
+              <strong>Setup & Build:</strong> Understand Node.js, PostCSS, and
+              run <code>npx tailwindcss init</code> to configure Tailwind.
+            </li>
+            <li>
+              <strong>Helpful Tools:</strong> Use VS Code Tailwind CSS
+              IntelliSense for auto-completion and suggestions.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tailwind Command Reference Table -->
+      <section class="mt-20">
+        <h2
+          class="text-2xl font-semibold text-green-400 glow-text mb-6 text-center"
+        >
+          Tailwind Command Reference Table
+        </h2>
+        <div
+          class="bg-gray-900 border border-gray-800 p-8 rounded-2xl shadow-md neon-glow"
+        >
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm text-left border-collapse">
+              <thead>
+                <tr class="bg-gray-800 text-green-400">
+                  <th class="p-3 border border-gray-800">Category</th>
+                  <th class="p-3 border border-gray-800">Class / Utility</th>
+                  <th class="p-3 border border-gray-800">
+                    Description / Example
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="text-gray-300">
+                <!-- Layout & Positioning -->
+                <tr class="hover:bg-gray-800/60 transition">
+                  <td class="p-3 border border-gray-800">
+                    Layout & Positioning
+                  </td>
+                  <td class="p-3 border border-gray-800">
+                    flex, flex-col / flex-row, items-center, justify-center,
+                    gap-2 / gap-4, grid, grid-cols-2 / grid-cols-3, p-2 / p-4 /
+                    px-4 / py-4, m-2 / m-4 / mx-auto / mb-2, w-24 / w-80, h-24 /
+                    min-h-screen, relative / absolute, inset-0, z-10
+                  </td>
+                  <td class="p-3 border border-gray-800">
+                    Control layout, spacing, alignment, width/height, and
+                    positioning of elements.
+                  </td>
+                </tr>
+
+                <!-- Background & Colors -->
+                <tr class="hover:bg-gray-800/60 transition">
+                  <td class="p-3 border border-gray-800">
+                    Background & Colors
+                  </td>
+                  <td class="p-3 border border-gray-800">
+                    bg-white, bg-gray-100, bg-blue-500, bg-[#0a0a0f],
+                    hover:bg-blue-600
+                  </td>
+                  <td class="p-3 border border-gray-800">
+                    Set background colors and hover states, including custom
+                    colors.
+                  </td>
+                </tr>
+
+                <!-- Text & Typography -->
+                <tr class="hover:bg-gray-800/60 transition">
+                  <td class="p-3 border border-gray-800">Text & Typography</td>
+                  <td class="p-3 border border-gray-800">
+                    text-left / text-center / text-right, text-xl / text-2xl,
+                    font-bold, font-['Montserrat'], text-gray-700, mb-2 / mb-4,
+                    leading-relaxed
+                  </td>
+                  <td class="p-3 border border-gray-800">
+                    Control text alignment, size, weight, color, margin, line
+                    height, and custom fonts.
+                  </td>
+                </tr>
+
+                <!-- Borders & Radius -->
+                <tr class="hover:bg-gray-800/60 transition">
+                  <td class="p-3 border border-gray-800">Borders & Radius</td>
+                  <td class="p-3 border border-gray-800">
+                    rounded / rounded-lg / rounded-2xl, rounded-full, border,
+                    border-gray-300
+                  </td>
+                  <td class="p-3 border border-gray-800">
+                    Apply rounded corners and borders with customizable colors.
+                  </td>
+                </tr>
+
+                <!-- Shadows & Effects -->
+                <tr class="hover:bg-gray-800/60 transition">
+                  <td class="p-3 border border-gray-800">Shadows & Effects</td>
+                  <td class="p-3 border border-gray-800">
+                    shadow / shadow-lg / hover:shadow-2xl, transition-transform,
+                    duration-500, hover:scale-105
+                  </td>
+                  <td class="p-3 border border-gray-800">
+                    Add shadows, smooth transitions, and hover scaling effects.
+                  </td>
+                </tr>
+
+                <!-- Images & Buttons -->
+                <tr class="hover:bg-gray-800/60 transition">
+                  <td class="p-3 border border-gray-800">Images & Buttons</td>
+                  <td class="p-3 border border-gray-800">
+                    <strong>Image:</strong> w-24 h-24 rounded-full mx-auto
+                    mb-4<br />
+                    <strong>Button:</strong> bg-blue-500 text-white px-4 py-2
+                    rounded, hover:bg-blue-600, block mx-auto
+                  </td>
+                  <td class="p-3 border border-gray-800">
+                    Style images and buttons with size, shape, spacing, colors,
+                    and hover effects.
+                  </td>
+                </tr>
+
+                <!-- Quick Centering -->
+                <tr class="hover:bg-gray-800/60 transition">
+                  <td class="p-3 border border-gray-800">Quick Centering</td>
+                  <td class="p-3 border border-gray-800">
+                    flex items-center justify-center min-h-screen
+                  </td>
+                  <td class="p-3 border border-gray-800">
+                    Center content both vertically and horizontally on the
+                    screen.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step-by-Step Example -->
+      <section class="mt-16 text-center">
+        <h2 class="text-xl font-semibold text-green-400 glow-text mb-6">
+          Step-by-Step Example
+        </h2>
+        <p class="text-gray-400 mb-6 max-w-3xl mx-auto">
+          Here's a practical example of building a responsive card component
+          using Tailwind CSS:
+        </p>
+
+        <div
+          class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-md neon-glow inline-block text-left max-w-4xl mx-auto"
+        >
+          <pre class="text-green-300 text-sm">
+&lt;div class="bg-white p-6 w-80 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"&gt;
+  &lt;img src="profile.jpg" class="w-24 h-24 rounded-full mx-auto mb-4" alt="Profile"&gt;
+  
+  &lt;h3 class="text-xl font-bold text-center mb-2"&gt;John Doe&lt;/h3&gt;
+  &lt;p class="text-gray-700 text-center mb-4 leading-relaxed"&gt;
+    Tailwind CSS allows you to rapidly build flexible and modern UI components with utility classes.
+  &lt;/p&gt;
+
+  &lt;button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 block mx-auto"&gt;
+    Click Me
+  &lt;/button&gt;
+&lt;/div&gt;
+    </pre
+          >
+          <p class="text-gray-400 mt-4 text-sm">
+            This card uses utilities for layout (flex, mx-auto), spacing (p-6,
+            mb-4), typography (text-center, font-bold), colors (bg-white,
+            text-gray-700, bg-green-500), rounded corners, shadows, transitions,
+            and hover effects.
+          </p>
+        </div>
+      </section>
+
+      <!-- Did You Know Box -->
+      <div class="text-center mt-20">
+        <div
+          class="bg-gray-900 border border-gray-800 p-6 rounded-2xl inline-block shadow-md neon-glow"
+        >
+          <p class="text-green-400 font-semibold mb-2">🤓 Did You Know?</p>
+          <p class="text-gray-300">
+            Tailwind CSS was first released in 2017 and has quickly become one
+            of the most popular CSS frameworks due to its flexibility and
+            developer-friendly utility-first approach.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-center text-gray-500 text-sm pb-6">
+      © 2025 Web Development 1 | Tailwind Page
+    </footer>
+  </body>
+</html>

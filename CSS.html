@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>About CSS</title>
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      /* Fade-in animation */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+
+      /* Neon glow hover */
+      .neon-glow:hover {
+        box-shadow: 0 0 15px rgba(34, 197, 94, 0.6),
+          0 0 30px rgba(34, 197, 94, 0.4);
+      }
+
+      .glow-text {
+        text-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-950 text-gray-100 min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 left-0 w-full bg-gray-900 p-4 flex justify-between items-center z-10 shadow-lg border-b border-gray-800"
+    >
+      <!-- Logo -->
+      <div class="text-green-400 font-bold text-xl glow-text">WebDev</div>
+
+      <!-- Links -->
+      <div class="space-x-6">
+        <a
+          href="index.html"
+          class="text-gray-300 hover:text-green-400 transition"
+          >Home</a
+        >
+        <a
+          href="HTML.html"
+          class="text-gray-300 hover:text-green-400 transition"
+          >HTML</a
+        >
+        <a href="Git.html" class="text-gray-300 hover:text-green-400 transition"
+          >Git</a
+        >
+        <a
+          href="Tailwind.html"
+          class="text-gray-300 hover:text-green-400 transition"
+          >Tailwind</a
+        >
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20 px-6 max-w-5xl mx-auto fade-in">
+      <section class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-green-400 glow-text mb-4">
+          Cascading Style Sheets (CSS)
+        </h1>
+        <p class="text-gray-400 text-lg leading-relaxed">
+          CSS or <strong>Cascading Style Sheets</strong> is a stylesheet
+          language used to control the visual presentation of HTML documents.
+          While HTML provides the structure and content of a webpage, CSS
+          determines how that content appears — its layout, colors, fonts, and
+          responsiveness.
+        </p>
+      </section>
+
+      <!-- Info Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <!-- CSS Syntax -->
+        <div
+          class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-md neon-glow hover:scale-105 transition-transform duration-300"
+        >
+          <h2 class="text-xl font-semibold mb-3 text-green-400 glow-text">
+            CSS Syntax
+          </h2>
+          <ul class="text-gray-400 text-left list-disc list-inside space-y-2">
+            <li>
+              <strong>Rulesets:</strong> Composed of a selector and a
+              declaration block.
+            </li>
+            <li>
+              <strong>Selectors:</strong> Target specific HTML elements (e.g.,
+              <code>h1</code>, <code>.class-name</code>, <code>#id-name</code>).
+            </li>
+            <li>
+              <strong>Declaration Block:</strong> Contains one or more
+              declarations enclosed in curly braces <code>{}</code>.
+            </li>
+            <li>
+              <strong>Declarations:</strong> Each consists of a property and
+              value, separated by a colon and ending with a semicolon (e.g.,
+              <code>color: blue;</code>).
+            </li>
+          </ul>
+        </div>
+
+        <!-- Core CSS Concepts -->
+        <div
+          class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-md neon-glow hover:scale-105 transition-transform duration-300"
+        >
+          <h2 class="text-xl font-semibold mb-3 text-green-400 glow-text">
+            Core CSS Concepts
+          </h2>
+          <ul class="text-gray-400 text-left list-disc list-inside space-y-2">
+            <li>
+              <strong>Box Model:</strong> Every element is a box with content,
+              padding, border, and margin.
+            </li>
+            <li>
+              <strong>Cascade, Specificity & Inheritance:</strong> Determines
+              which styles apply when multiple rules target the same element.
+            </li>
+            <li>
+              <strong>Selectors:</strong> Includes element, class, ID,
+              attribute, pseudo-classes, and pseudo-elements.
+            </li>
+            <li>
+              <strong>Units:</strong> Measurements can use <code>px</code>,
+              <code>em</code>, <code>rem</code>, <code>%</code>,
+              <code>vw</code>, or <code>vh</code>.
+            </li>
+            <li>
+              <strong>Common Properties:</strong> Text (<code>font-size</code>,
+              <code>color</code>), background (<code>background-color</code>),
+              and layout (<code>display</code>, <code>width</code>,
+              <code>height</code>).
+            </li>
+          </ul>
+        </div>
+
+        <!-- Layout and Positioning -->
+        <div
+          class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-md neon-glow hover:scale-105 transition-transform duration-300"
+        >
+          <h2 class="text-xl font-semibold mb-3 text-green-400 glow-text">
+            Layout and Positioning
+          </h2>
+          <ul class="text-gray-400 text-left list-disc list-inside space-y-2">
+            <li>
+              <strong>Display Property:</strong> Defines how an element is
+              displayed — block, inline, inline-block, or flex.
+            </li>
+            <li>
+              <strong>Position Property:</strong> Controls placement using
+              <code>static</code>, <code>relative</code>, <code>absolute</code>,
+              <code>fixed</code>, or <code>sticky</code>.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Responsive Design -->
+        <div
+          class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-md neon-glow hover:scale-105 transition-transform duration-300"
+        >
+          <h2 class="text-xl font-semibold mb-3 text-green-400 glow-text">
+            Responsive Design
+          </h2>
+          <ul class="text-gray-400 text-left list-disc list-inside space-y-2">
+            <li>
+              <strong>Media Queries:</strong> Allow styles to adapt to different
+              screen sizes (e.g., mobile vs. desktop).
+            </li>
+            <li>
+              <strong>Fluid Layouts:</strong> Use flexible units like
+              percentages or <code>vw</code> instead of fixed pixels.
+            </li>
+            <li>
+              <strong>Flexbox & Grid:</strong> CSS layout systems that make
+              responsive design easier and more consistent.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- CSS Properties Table -->
+      <section class="mt-20">
+        <h2
+          class="text-2xl font-semibold text-green-400 glow-text mb-6 text-center"
+        >
+          Common CSS Properties
+        </h2>
+        <p class="text-gray-400 mb-6 text-center">
+          Here’s a simple reference of frequently used CSS properties and what
+          they do:
+        </p>
+
+        <div
+          class="bg-gray-900 border border-gray-800 p-8 rounded-2xl shadow-md neon-glow"
+        >
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm text-left border-collapse">
+              <thead>
+                <tr class="bg-gray-800 text-green-400">
+                  <th class="p-3 border border-gray-800">Property</th>
+                  <th class="p-3 border border-gray-800">Description</th>
+                  <th class="p-3 border border-gray-800">Example</th>
+                </tr>
+              </thead>
+              <tbody class="text-gray-300">
+                <tr class="hover:bg-gray-800/60 transition">
+                  <td class="p-3 border border-gray-800"><code>color</code></td>
+                  <td class="p-3 border border-gray-800">
+                    Sets the text color
+                  </td>
+                  <td class="p-3 border border-gray-800">
+                    <code>color: blue;</code>
+                  </td>
+                </tr>
+                <tr class="hover:bg-gray-800/60 transition">
+                  <td class="p-3 border border-gray-800">
+                    <code>background-color</code>
+                  </td>
+                  <td class="p-3 border border-gray-800">
+                    Changes the background color
+                  </td>
+                  <td class="p-3 border border-gray-800">
+                    <code>background-color: lightgray;</code>
+                  </td>
+                </tr>
+                <tr class="hover:bg-gray-800/60 transition">
+                  <td class="p-3 border border-gray-800">
+                    <code>font-size</code>
+                  </td>
+                  <td class="p-3 border border-gray-800">
+                    Adjusts the text size
+                  </td>
+                  <td class="p-3 border border-gray-800">
+                    <code>font-size: 18px;</code>
+                  </td>
+                </tr>
+                <tr class="hover:bg-gray-800/60 transition">
+                  <td class="p-3 border border-gray-800">
+                    <code>margin</code>
+                  </td>
+                  <td class="p-3 border border-gray-800">
+                    Controls outer spacing
+                  </td>
+                  <td class="p-3 border border-gray-800">
+                    <code>margin: 20px;</code>
+                  </td>
+                </tr>
+                <tr class="hover:bg-gray-800/60 transition">
+                  <td class="p-3 border border-gray-800">
+                    <code>padding</code>
+                  </td>
+                  <td class="p-3 border border-gray-800">
+                    Controls inner spacing
+                  </td>
+                  <td class="p-3 border border-gray-800">
+                    <code>padding: 10px;</code>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-16 text-center">
+        <h3 class="text-xl font-semibold text-green-400 glow-text mb-6">
+          Example Output
+        </h3>
+
+        <div
+          class="bg-gray-900 border border-gray-800 p-10 rounded-2xl shadow-md neon-glow inline-block"
+        >
+          <p class="text-gray-400 mb-4 max-w-md mx-auto">
+            This example shows how some common CSS properties like
+            <code>background-color</code>, <code>padding</code>, and
+            <code>color</code>
+            affect an element’s appearance.
+          </p>
+
+          <div
+            class="bg-blue-600 text-white px-8 py-4 rounded-lg inline-block shadow-lg transition transform hover:scale-105 hover:shadow-green-500/30"
+          >
+            <p class="text-lg font-semibold">Styled Box</p>
+            <p class="text-sm text-gray-200">
+              Clean spacing and color control in action!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CSS Tip / Blockquote -->
+      <section class="mt-20 text-center">
+        <blockquote
+          class="bg-gray-900 border border-gray-800 p-6 rounded-2xl inline-block shadow-md neon-glow"
+        >
+          <p class="text-gray-400 max-w-md mx-auto">
+            💡 <strong>Tip:</strong> CSS becomes much easier to manage when you
+            separate it into its own file (like <code>style.css</code>) instead
+            of writing styles directly inside your HTML. This helps keep your
+            projects clean and reusable.
+          </p>
+        </blockquote>
+      </section>
+    </main>
+
+    <footer class="text-center text-gray-500 text-sm pb-6">
+      © 2025 Web Development 1 | CSS Page
+    </footer>
+  </body>
+</html>

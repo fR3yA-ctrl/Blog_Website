@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Git</title>
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      /* Fade-in animation */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+
+      /* Neon glow hover */
+      .neon-glow:hover {
+        box-shadow: 0 0 15px rgba(34, 197, 94, 0.6),
+          0 0 30px rgba(34, 197, 94, 0.4);
+      }
+
+      .glow-text {
+        text-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-950 text-gray-100 min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 left-0 w-full bg-gray-900 p-4 flex justify-between items-center z-10 shadow-lg border-b border-gray-800"
+    >
+      <!-- Logo -->
+      <div class="text-green-400 font-bold text-xl glow-text">WebDev</div>
+
+      <!-- Links -->
+      <div class="space-x-6">
+        <a
+          href="index.html"
+          class="text-gray-300 hover:text-green-400 transition"
+          >Home</a
+        >
+        <a
+          href="HTML.html"
+          class="text-gray-300 hover:text-green-400 transition"
+          >HTML</a
+        >
+        <a href="CSS.html" class="text-gray-300 hover:text-green-400 transition"
+          >CSS</a
+        >
+        <a
+          href="Tailwind.html"
+          class="text-gray-300 hover:text-green-400 transition"
+          >Tailwind</a
+        >
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20 px-6 max-w-5xl mx-auto fade-in">
+      <section class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-green-400 glow-text mb-4">Git</h1>
+        <p class="text-gray-400 text-lg leading-relaxed max-w-3xl mx-auto">
+          <strong>Git</strong> is a powerful version control system that allows
+          developers to track changes, collaborate efficiently, and maintain
+          project history. In web development, it helps manage HTML, CSS, and
+          other code files in a structured, organized way.
+        </p>
+      </section>
+
+      <!-- Info Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-16">
+        <div
+          class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-md neon-glow hover:scale-105 transition-transform duration-300"
+        >
+          <h2 class="text-xl font-semibold mb-3 text-green-400 glow-text">
+            Core Concepts
+          </h2>
+          <ul class="text-gray-400 text-left list-disc list-inside space-y-2">
+            <li>
+              <strong>Repository (Repo):</strong> Stores all files and history.
+            </li>
+            <li>
+              <strong>Working Directory:</strong> The files you're currently
+              editing.
+            </li>
+            <li>
+              <strong>Staging Area (Index):</strong> Prepares changes before
+              committing.
+            </li>
+            <li>
+              <strong>Commit:</strong> A snapshot of your project at a point in
+              time.
+            </li>
+            <li><strong>Branch:</strong> A separate line of development.</li>
+            <li><strong>Merge:</strong> Combines branches together.</li>
+            <li>
+              <strong>Remote Repository:</strong> A hosted version (e.g.,
+              GitHub).
+            </li>
+          </ul>
+        </div>
+
+        <!-- Basic Commands -->
+        <div
+          class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-md neon-glow hover:scale-105 transition-transform duration-300"
+        >
+          <h2 class="text-xl font-semibold mb-3 text-green-400 glow-text">
+            Basic Git Commands
+          </h2>
+          <ul class="text-gray-400 text-left list-disc list-inside space-y-2">
+            <li><code>git init</code> — Initialize a local repository.</li>
+            <li>
+              <code>git clone [url]</code> — Copy a remote repo to your device.
+            </li>
+            <li><code>git add .</code> — Stage all modified files.</li>
+            <li>
+              <code>git commit -m "message"</code> — Save your staged changes.
+            </li>
+            <li><code>git branch</code> — List all branches.</li>
+            <li>
+              <code>git checkout [branch]</code> — Switch to another branch.
+            </li>
+            <li><code>git pull</code> — Get updates from the remote repo.</li>
+            <li><code>git push</code> — Upload your commits online.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center mb-20">
+        <div
+          class="bg-gray-900 border border-gray-800 p-6 rounded-2xl inline-block shadow-md neon-glow max-w-2xl mx-auto"
+        >
+          <p class="text-green-400 font-semibold mb-2">🤓 Did You Know?</p>
+          <p class="text-gray-300">
+            Git was created by <strong>Linus Torvalds</strong> (the same person
+            who made Linux!) in 2005 to help manage the Linux kernel’s source
+            code.
+          </p>
+        </div>
+      </div>
+
+      <!-- Command Reference Table -->
+      <section class="mb-20">
+        <h2
+          class="text-2xl font-semibold text-green-400 glow-text mb-6 text-center"
+        >
+          Git Command Reference Table
+        </h2>
+        <div
+          class="bg-gray-900 border border-gray-800 p-8 rounded-2xl shadow-md neon-glow"
+        >
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm text-left border-collapse">
+              <thead>
+                <tr class="bg-gray-800 text-green-400">
+                  <th class="p-3 border border-gray-800">Command</th>
+                  <th class="p-3 border border-gray-800">Description</th>
+                  <th class="p-3 border border-gray-800">Example</th>
+                </tr>
+              </thead>
+              <tbody class="text-gray-300">
+                <tr class="hover:bg-gray-800/60 transition">
+                  <td class="p-3 border border-gray-800">
+                    <code>git init</code>
+                  </td>
+                  <td class="p-3 border border-gray-800">
+                    Initialize repository
+                  </td>
+                  <td class="p-3 border border-gray-800">
+                    <code>git init</code>
+                  </td>
+                </tr>
+                <tr class="hover:bg-gray-800/60 transition">
+                  <td class="p-3 border border-gray-800">
+                    <code>git add .</code>
+                  </td>
+                  <td class="p-3 border border-gray-800">Stage all changes</td>
+                  <td class="p-3 border border-gray-800">
+                    <code>git add .</code>
+                  </td>
+                </tr>
+                <tr class="hover:bg-gray-800/60 transition">
+                  <td class="p-3 border border-gray-800">
+                    <code>git commit</code>
+                  </td>
+                  <td class="p-3 border border-gray-800">
+                    Save staged changes
+                  </td>
+                  <td class="p-3 border border-gray-800">
+                    <code>git commit -m "Initial commit"</code>
+                  </td>
+                </tr>
+                <tr class="hover:bg-gray-800/60 transition">
+                  <td class="p-3 border border-gray-800">
+                    <code>git push</code>
+                  </td>
+                  <td class="p-3 border border-gray-800">Upload commits</td>
+                  <td class="p-3 border border-gray-800">
+                    <code>git push origin main</code>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-20 text-center">
+        <h2 class="text-2xl font-semibold text-green-400 glow-text mb-4">
+          Step-by-Step Example
+        </h2>
+        <div
+          class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-md neon-glow inline-block text-left max-w-4xl mx-auto text-left"
+        >
+          <pre class="text-green-300 text-sm">
+$ git init
+Initialized empty Git repository in my-project/.git/
+
+$ git add index.html
+$ git commit -m "Add homepage"
+[main (root-commit) abc1234] Add homepage
+ 1 file changed, 10 insertions(+)
+ create mode 100644 index.html
+
+$ git push origin main
+Pushing to https://github.com/username/my-project.git
+    </pre
+          >
+        </div>
+      </section>
+
+      <!-- Git Workflow Section -->
+      <section class="text-center mb-20">
+        <h2 class="text-2xl font-semibold text-green-400 glow-text mb-4">
+          Git Workflow Overview
+        </h2>
+        <p class="text-gray-400 mb-6 max-w-3xl mx-auto">
+          A typical Git workflow helps developers move smoothly between writing
+          code, tracking changes, and sharing them online:
+        </p>
+
+        <div
+          class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-md neon-glow max-w-4xl mx-auto text-left"
+        >
+          <ol class="list-decimal list-inside text-gray-300 space-y-2">
+            <li>
+              <strong>Write Code</strong> — Modify files in your working
+              directory.
+            </li>
+            <li>
+              <strong>Stage Changes</strong> — Use <code>git add</code> to
+              prepare your updates.
+            </li>
+            <li>
+              <strong>Commit</strong> — Save your changes using
+              <code>git commit -m "message"</code>.
+            </li>
+            <li>
+              <strong>Push</strong> — Send commits to GitHub using
+              <code>git push</code>.
+            </li>
+            <li>
+              <strong>Pull</strong> — Download updates made by others using
+              <code>git pull</code>.
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Tip Box -->
+      <div class="mb-20 text-center">
+        <div
+          class="bg-gray-900 border border-gray-800 p-6 rounded-2xl inline-block shadow-md neon-glow max-w-2xl mx-auto"
+        >
+          <p class="text-green-400 font-semibold mb-2">💡 Tip:</p>
+          <p class="text-gray-400">
+            Always write clear and descriptive commit messages — they help
+            others (and your future self) understand what each change does!
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mb-20">
+        <div
+          class="bg-gray-800 border border-gray-700 p-6 rounded-xl inline-block shadow-md max-w-2xl mx-auto"
+        >
+          <h3 class="text-green-400 font-semibold mb-2">🧠 Quick Recap:</h3>
+          <ul class="text-gray-300 text-sm space-y-1 list-none">
+            <li><code>git status</code> → Check current changes</li>
+            <li><code>git diff</code> → See what changed</li>
+            <li><code>git log</code> → View commit history</li>
+            <li><code>git restore [file]</code> → Undo unstaged edits</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-center text-gray-500 text-sm pb-6">
+      © 2025 Web Development 1 | Git Page
+    </footer>
+  </body>
+</html>

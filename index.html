@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Web Development 1</title>
+
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      /* Fade-in animation */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+
+      /* Neon glow hover */
+      .neon-glow:hover {
+        box-shadow: 0 0 15px rgba(34, 197, 94, 0.6),
+          0 0 30px rgba(34, 197, 94, 0.4);
+      }
+
+      .glow-text {
+        text-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-gray-950 flex flex-col items-center min-h-screen text-gray-100"
+  >
+    <header class="mt-32 mb-12 text-center px-6">
+      <h1 class="text-4xl sm:text-5xl font-bold mb-3 text-green-400 glow-text">
+        Welcome to Web Development 1
+      </h1>
+      <p class="text-gray-600 text-lg">
+        Explore the fundamentals of modern web design
+      </p>
+    </header>
+
+    <section class="max-w-3xl mx-auto text-center mt-6 mb-10 px-6">
+      <p class="text-gray-400 leading-relaxed">
+        Learn the core technologies of the web — HTML, CSS, Git, and Tailwind —
+        through interactive lessons and hands-on projects. This course is
+        designed to help you build a strong foundation for modern front-end
+        development.
+      </p>
+    </section>
+
+    <main
+      class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+    >
+      <!-- HTML -->
+      <a
+        href="HTML.html"
+        class="bg-gray-900 border border-gray-800 rounded-2xl p-6 flex flex-col justify-center shadow-md hover:scale-105 transition-transform duration-300 fade-in neon-glow"
+        style="animation-delay: 0.1s"
+      >
+        <h2 class="text-2xl font-semibold mb-3 text-green-400 glow-text">
+          HTML
+        </h2>
+        <p class="text-gray-400">
+          The standard language for creating and structuring content on web
+          pages.
+        </p>
+      </a>
+
+      <!-- CSS -->
+      <a
+        href="CSS.html"
+        class="bg-gray-900 border border-gray-800 rounded-2xl p-6 flex flex-col justify-center shadow-md hover:scale-105 transition-transform duration-300 fade-in neon-glow"
+        style="animation-delay: 0.2s"
+      >
+        <h2 class="text-2xl font-semibold mb-3 text-green-400 glow-text">
+          CSS
+        </h2>
+        <p class="text-gray-400">
+          Describes how HTML elements should be displayed with design, color,
+          and layout.
+        </p>
+      </a>
+
+      <!-- Git -->
+      <a
+        href="Git.html"
+        class="bg-gray-900 border border-gray-800 rounded-2xl p-6 flex flex-col justify-center shadow-md hover:scale-105 transition-transform duration-300 fade-in neon-glow"
+        style="animation-delay: 0.3s"
+      >
+        <h2 class="text-2xl font-semibold mb-3 text-green-400 glow-text">
+          Git
+        </h2>
+        <p class="text-gray-400">
+          A version control system that tracks changes in your code over time.
+        </p>
+      </a>
+
+      <!-- Tailwind -->
+      <a
+        href="Tailwind.html"
+        class="bg-gray-900 border border-gray-800 rounded-2xl p-6 flex flex-col justify-center shadow-md hover:scale-105 transition-transform duration-300 fade-in neon-glow"
+        style="animation-delay: 0.4s"
+      >
+        <h2 class="text-2xl font-semibold mb-3 text-green-400 glow-text">
+          Tailwind
+        </h2>
+        <p class="text-gray-400">
+          A utility-first CSS framework for building modern, responsive websites
+          quickly.
+        </p>
+      </a>
+    </main>
+
+    <footer class="text-center text-gray-600 text-sm mt-16 mb-10">
+      © 2025 Web Development 1
+    </footer>
+  </body>
+</html>

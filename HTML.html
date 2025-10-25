@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>About HTML</title>
+
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      /* Fade-in animation */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+
+      /* Neon glow hover */
+      .neon-glow:hover {
+        box-shadow: 0 0 15px rgba(34, 197, 94, 0.6),
+          0 0 30px rgba(34, 197, 94, 0.4);
+      }
+
+      .glow-text {
+        text-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-950 text-gray-100 min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 left-0 w-full bg-gray-900 p-4 flex justify-between items-center z-10 shadow-lg border-b border-gray-800"
+    >
+      <div class="text-green-400 font-bold text-xl glow-text">WebDev</div>
+
+      <div class="space-x-6">
+        <a
+          href="index.html"
+          class="text-gray-300 hover:text-green-400 transition"
+          >Home</a
+        >
+        <a href="CSS.html" class="text-gray-300 hover:text-green-400 transition"
+          >CSS</a
+        >
+        <a href="Git.html" class="text-gray-300 hover:text-green-400 transition"
+          >Git</a
+        >
+        <a
+          href="Tailwind.html"
+          class="text-gray-300 hover:text-green-400 transition"
+          >Tailwind</a
+        >
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20 px-6 max-w-5xl mx-auto fade-in">
+      <section class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-green-400 glow-text mb-4">
+          HyperText Markup Language (HTML)
+        </h1>
+        <p class="text-gray-400 text-lg leading-relaxed">
+          HTML or <strong>HyperText Markup Language</strong> is the foundation
+          of every website. It provides structure to web pages using elements
+          and tags that define text, images, links, and other content.
+        </p>
+      </section>
+
+      <!-- Info Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <!-- Purpose and Structure -->
+        <div
+          class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-md neon-glow hover:scale-105 transition-transform duration-300"
+        >
+          <h2 class="text-xl font-semibold mb-3 text-green-400 glow-text">
+            Purpose and Structure
+          </h2>
+          <ul class="text-gray-400 text-left list-disc list-inside space-y-2">
+            <li>
+              <strong>Elements and Tags:</strong> HTML uses tags to define
+              content. Most come in pairs—opening and closing—surrounding their
+              content.
+            </li>
+            <li>
+              <strong>Document Type Declaration:</strong> Every HTML file should
+              start with <code>&lt;!DOCTYPE html&gt;</code> to indicate HTML5.
+            </li>
+            <li>
+              <strong>Basic Structure:</strong> Includes
+              <code>&lt;head&gt;</code> for metadata and
+              <code>&lt;body&gt;</code> for visible content.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Common HTML Elements -->
+        <div
+          class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-md neon-glow hover:scale-105 transition-transform duration-300"
+        >
+          <h2 class="text-xl font-semibold mb-3 text-green-400 glow-text">
+            Common HTML Elements
+          </h2>
+          <ul class="text-gray-400 text-left list-disc list-inside space-y-2">
+            <li>
+              <strong>Headings:</strong> <code>h1–h6</code> define titles.
+            </li>
+            <li>
+              <strong>Paragraphs:</strong> <code>p</code> defines blocks of
+              text.
+            </li>
+            <li>
+              <strong>Links:</strong> <code>a</code> creates hyperlinks using
+              <code>href</code>.
+            </li>
+            <li>
+              <strong>Images:</strong> <code>img</code> embeds pictures using
+              <code>src</code> and <code>alt</code>.
+            </li>
+            <li>
+              <strong>Lists:</strong> <code>ul</code> and <code>ol</code> hold
+              list items.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Attributes -->
+        <div
+          class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-md neon-glow hover:scale-105 transition-transform duration-300"
+        >
+          <h2 class="text-xl font-semibold mb-3 text-green-400 glow-text">
+            Attributes
+          </h2>
+          <p class="text-gray-400 text-left leading-relaxed">
+            Attributes add extra information to elements. They appear inside the
+            opening tag, written as <code>name="value"</code> pairs. Common
+            examples include <code>href</code> (for links) and <code>src</code>
+            (for images).
+          </p>
+        </div>
+
+        <!-- Semantic HTML -->
+        <div
+          class="bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-md neon-glow hover:scale-105 transition-transform duration-300"
+        >
+          <h2 class="text-xl font-semibold mb-3 text-green-400 glow-text">
+            Semantic HTML
+          </h2>
+          <p class="text-gray-400 text-left leading-relaxed">
+            Semantic tags like <code>header</code>, <code>nav</code>,
+            <code>main</code>, <code>article</code>, and <code>footer</code> add
+            meaning to your content — helping both users and search engines
+            understand your page better.
+          </p>
+        </div>
+      </div>
+
+      <!-- Example Code Block -->
+      <section class="mt-16">
+        <h2
+          class="text-2xl font-semibold text-green-400 glow-text mb-4 text-center"
+        >
+          Example: Basic HTML Structure
+        </h2>
+        <pre
+          class="bg-gray-900 text-green-400 p-5 rounded-xl text-sm overflow-x-auto border border-gray-800"
+        >
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;This is my first webpage.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+        <p class="text-center text-gray-400 mt-4 italic">
+          💡 Try creating this in a text editor and open it in your browser to
+          see your first webpage!
+        </p>
+      </section>
+
+      <!-- Fun Fact -->
+      <section class="mt-16 text-center">
+        <div
+          class="bg-gray-900 border border-gray-800 p-6 rounded-2xl inline-block shadow-md neon-glow"
+        >
+          <p class="text-green-400 font-semibold mb-2">🤓Fun Fact</p>
+          <p class="text-gray-400 max-w-md mx-auto">
+            HTML was first introduced in 1993 and continues to evolve with
+            HTML5, bringing audio, video, and semantic improvements to modern
+            web design.
+          </p>
+        </div>
+      </section>
+
+      <!-- Showcase Section -->
+      <section class="mt-20">
+        <h2
+          class="text-2xl font-semibold text-green-400 glow-text mb-6 text-center"
+        >
+          HTML Showcase: Tags in Action
+        </h2>
+
+        <div
+          class="bg-gray-900 border border-gray-800 p-8 rounded-2xl shadow-md neon-glow"
+        >
+          <p class="text-gray-400 mb-6 text-center">
+            Below is a quick reference table showing different HTML tag
+            categories and their functions.
+          </p>
+
+          <table
+            class="w-full text-gray-300 border border-gray-800 rounded-lg mb-10"
+          >
+            <thead class="bg-gray-800 text-green-400">
+              <tr>
+                <th class="p-3 text-left">Tag</th>
+                <th class="p-3 text-left">Category</th>
+                <th class="p-3 text-left">Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-t border-gray-800">
+                <td class="p-3"><code>&lt;h1&gt; - &lt;h6&gt;</code></td>
+                <td class="p-3">Text</td>
+                <td class="p-3">Define headings and titles</td>
+              </tr>
+              <tr class="border-t border-gray-800">
+                <td class="p-3"><code>&lt;table&gt;</code></td>
+                <td class="p-3">Layout</td>
+                <td class="p-3">Displays data in tabular form</td>
+              </tr>
+              <tr class="border-t border-gray-800">
+                <td class="p-3"><code>&lt;form&gt;</code></td>
+                <td class="p-3">Input</td>
+                <td class="p-3">Collects user data</td>
+              </tr>
+              <tr class="border-t border-gray-800">
+                <td class="p-3">
+                  <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>
+                </td>
+                <td class="p-3">Containers</td>
+                <td class="p-3">Group or style sections of content</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <hr class="border-gray-800 mb-8" />
+
+          <h3 class="text-green-400 font-semibold glow-text text-center mb-4">
+            Try It Yourself: Feedback Form
+          </h3>
+          <form class="space-y-4 max-w-md mx-auto text-left">
+            <div>
+              <label for="name" class="block text-gray-300 mb-1">Name:</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                class="w-full p-2 rounded-lg bg-gray-800 border border-gray-700 text-gray-100"
+              />
+            </div>
+
+            <div>
+              <label for="feedback" class="block text-gray-300 mb-1"
+                >Feedback:</label
+              >
+              <textarea
+                id="feedback"
+                rows="4"
+                placeholder="Share your thoughts..."
+                class="w-full p-2 rounded-lg bg-gray-800 border border-gray-700 text-gray-100"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-green-500 hover:bg-green-600 text-gray-900 font-semibold py-2 rounded-lg transition neon-glow"
+            >
+              Submit Feedback
+            </button>
+          </form>
+
+          <p class="text-gray-400 text-sm text-center mt-6">
+            <em
+              >This simple form doesn’t send data — it’s just a demo of HTML
+              input elements.</em
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center text-gray-600 text-sm pb-10 mt-12">
+      © 2025 Web Development 1 | HTML Page
+    </footer>
+  </body>
+</html>
